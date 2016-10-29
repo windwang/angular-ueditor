@@ -19,7 +19,6 @@
     "test",
     "tests",
     "sample",
-    "ueditor",
     "src"
   ],
   "dependencies": {
