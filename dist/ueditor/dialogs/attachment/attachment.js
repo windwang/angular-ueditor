@@ -474,7 +474,10 @@
                         /* 添加额外的GET参数 */
                         var params = utils.serializeParam(editor.queryCommandValue('serverparam')) || '',
                             url = utils.formatUrl(actionUrl + (actionUrl.indexOf('?') == -1 ? '?':'&') + 'encode=utf-8&' + params);
+
+                        var formData=editor.getFormData(files)                        
                         uploader.option('server', url);
+                        uploader.option('formData',formData)
                         setState('uploading', files);
                         break;
                     case 'stopUpload':
