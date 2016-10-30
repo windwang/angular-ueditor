@@ -519,7 +519,6 @@
                 uploader.option('server', url);
                 uploader.option('formData', formData)
                 setState('uploading', file);
-                break;
             })
 
             uploader.on('all', function (type, files) {
@@ -566,7 +565,7 @@
                     } else {
                         $file
                             .find('.error')
-                            .text(json.state)
+                            .text(responseText)
                             .show();
                     }
                 } catch (e) {
